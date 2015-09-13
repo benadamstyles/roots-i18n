@@ -1,0 +1,30 @@
+{
+  "name": "roots-i18n",
+  "version": "0.0.1",
+  "description": "A naive i18n extension for the Roots static site generator ecosystem",
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/index.js --out-file lib/index.js"
+  },
+  "keywords": [
+    "roots",
+    "static",
+    "i18n",
+    "l10n",
+    "translation",
+    "site",
+    "international",
+    "generator",
+    "extension"
+  ],
+  "author": "Ben Styles",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^5.0.14",
+    "lodash.get": "^3.7.0",
+    "mkdirp": "^0.5.1",
+    "read-yaml": "^1.0.0",
+    "roots-util": "^0.1.0"
+  }
+}
