@@ -2,6 +2,7 @@
   "name": "roots-i18n",
   "version": "0.0.1",
   "description": "A naive i18n extension for the Roots static site generator ecosystem",
+  "repository": "https://github.com/Leeds-eBooks/roots-i18n.git",
   "main": "lib",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,6 +22,7 @@
   "author": "Ben Styles",
   "license": "MIT",
   "dependencies": {
+    "babel": "^5.8.23",
     "glob": "^5.0.14",
     "lodash.get": "^3.7.0",
     "mkdirp": "^0.5.1",
