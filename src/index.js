@@ -111,17 +111,17 @@ export default function({translations, viewExtension, templatesGlob}) {
     category_hooks() {
       const self = this
 
+      // A Set to hold references to view templates that have been processed,
+      // so we don't do them multiple times (this was happening, can't remember why)
+      const done = new Set()
+
       return {
         after(ctx) {
           // If user hasn't supplied `templatesGlob` (i.e. they're not using roots-records)
           // don't do anything
           if (!templatesGlob) return false
           else {
-
-            // A Set to hold references to view templates that have been processed,
-            // so we don't do them multiple times (this was happening, can't remember why)
-            const done = new Set()
-
+            
             glob.sync(path.join(ctx.roots.config.output, templatesGlob))
             .filter(file => {
 
