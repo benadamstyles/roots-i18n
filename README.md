@@ -1,5 +1,5 @@
 # roots-i18n
-A naive i18n extension for the [Roots](http://roots.cx/) static site generator ecosystem
+A naïve i18n extension for the [Roots](http://roots.cx/) static site generator ecosystem.
 
 This extension makes many assumptions. It is not (yet) a catch-all solution to i18n in Roots. However, within strict limitations, it can be considered _production ready_.
 
