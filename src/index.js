@@ -108,6 +108,7 @@ export default function({translations, viewExtension, templatesGlob}) {
       }
     }
 
+    // The following is ONLY for roots-records "single view templates"
     category_hooks() {
       const self = this
 
