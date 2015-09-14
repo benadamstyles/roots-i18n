@@ -113,7 +113,7 @@ export default function({translations, viewExtension, templatesGlob}) {
 
       // A Set to hold references to view templates that have been processed,
       // so we don't do them multiple times (this was happening, can't remember why)
-      const done = new Set()
+      if (!this.done) this.done = new Set()
 
       return {
         after(ctx) {
@@ -121,14 +121,14 @@ export default function({translations, viewExtension, templatesGlob}) {
           // don't do anything
           if (!templatesGlob) return false
           else {
-            
+
             glob.sync(path.join(ctx.roots.config.output, templatesGlob))
             .filter(file => {
 
               // Check the Set, don't do it twice
-              if (done.has(file)) return false
+              if (self.done.has(file)) return false
               // Shortcut for add to Set and return true
-              else return done.add(file)
+              else return self.done.add(file)
             })
 
             // Get the content of each "single view template"
