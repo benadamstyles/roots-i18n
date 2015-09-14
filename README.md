@@ -95,7 +95,7 @@ div.faq
   :marked
     ## {{ faq.title }}
 
-//- ...
+//- ------------------------------------•
 
 - var tabs = ['requests', 'quotes', 'jobs', 'completed']
 
@@ -110,12 +110,12 @@ nav.dashboard-nav
             value= tab)
           span {{ dashboard.tabs.#{tab} }}
 
-//- ...
+//- ------------------------------------•
 
 doctype html
 html(lang='{{ lang }}')
 
-//- ...
+//- ------------------------------------•
 
 a(href='/{{ dir }}') {{ homepage.title }}
 
