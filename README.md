@@ -112,8 +112,7 @@ nav.dashboard-nav
 ```jade
 doctype html
 html(lang='{{ lang }}')
-
-//- ------------------------------------•
-
+```
+```jade
 a(href='/{{ dir }}') {{ homepage.title }}
 ```
