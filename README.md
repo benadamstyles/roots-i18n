@@ -94,9 +94,8 @@ module.exports =
 div.faq
   :marked
     ## {{ faq.title }}
-
-//- ------------------------------------•
-
+```
+```jade
 - var tabs = ['requests', 'quotes', 'jobs', 'completed']
 
 nav.dashboard-nav
@@ -109,14 +108,12 @@ nav.dashboard-nav
             name="dashboard-nav",
             value= tab)
           span {{ dashboard.tabs.#{tab} }}
-
-//- ------------------------------------•
-
+```
+```jade
 doctype html
 html(lang='{{ lang }}')
 
 //- ------------------------------------•
 
 a(href='/{{ dir }}') {{ homepage.title }}
-
 ```
