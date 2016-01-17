@@ -1,4 +1,4 @@
-import 'babel/polyfill'
+import 'babel-polyfill'
 import glob from 'glob'
 import RootsUtil from 'roots-util'
 import path from 'path'
@@ -42,7 +42,7 @@ function getLang(langFile) {
  * @param  {String} templatesGlob Where to find roots-records "single view templates"
  * @return {Class}                The roots-i18n class
  */
-export default function({translations, viewExtension, templatesGlob}) {
+function getI18n({translations, viewExtension, templatesGlob}) {
 
   return class I18n {
     constructor(roots) {
@@ -173,3 +173,5 @@ export default function({translations, viewExtension, templatesGlob}) {
     }
   }
 }
+
+module.exports = getI18n
