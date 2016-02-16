@@ -1,6 +1,6 @@
 {
   "name": "roots-i18n",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A naïve i18n extension for the Roots static site generator ecosystem",
   "repository": "https://github.com/Leeds-eBooks/roots-i18n.git",
   "main": "lib",
