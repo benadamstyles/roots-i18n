@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.3.14",
-    "glob": "^5.0.14",
+    "globby": "^4.0.0",
     "lodash.get": "^3.7.0",
     "mkdirp": "^0.5.1",
     "read-yaml": "^1.0.0",

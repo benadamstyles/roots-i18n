@@ -1,5 +1,5 @@
 import 'babel-polyfill'
-import glob from 'glob'
+import globby from 'globby'
 import RootsUtil from 'roots-util'
 import path from 'path'
 import fs from 'fs'
@@ -51,7 +51,7 @@ function getI18n({translations, viewExtension, templatesGlob}) {
       this.util = new RootsUtil(roots)
 
       // Gets all the translation files, using `translations` – the user-supplied globbing pattern
-      this.langFiles = glob.sync(path.join(roots.root, translations))
+      this.langFiles = globby.sync(path.join(roots.root, translations))
 
       // Populate the langMap
       this.langFiles.forEach(langFile => langMap.set(langFile, yaml.sync(langFile)))
@@ -122,8 +122,9 @@ function getI18n({translations, viewExtension, templatesGlob}) {
           // don't do anything
           if (!templatesGlob) return false
           else {
+            const globs = Array.isArray(templatesGlob) ? templatesGlob : [templatesGlob]
 
-            glob.sync(path.join(ctx.roots.config.output, templatesGlob))
+            globby.sync(globs.map(glob => path.join(ctx.roots.config.output, glob)))
             .filter(file => {
 
               // Check the Set, don't do it twice

@@ -71,7 +71,7 @@ module.exports =
     i18n(
       translations: 'i18n/*'
       viewExtension: 'jade'
-      templatesGlob: 'request/**/*.html'
+      templatesGlob: ['request/**/*.html']
     )
 
     # ...
@@ -82,7 +82,7 @@ module.exports =
 
 - `translations`: This is a globbing pattern that matches all your translation yaml files, [explained above](#configuration).
 - `viewExtension`: This tells **roots-i18n** how to identify your view templates.
-- `templatesGlob`: This property exists to play nicely with [roots-records](https://github.com/carrot/roots-records). If you're not using that extension, you can omit this property. If you are, this should be a globbing pattern that identifies all your **roots-records** ["single view templates"](https://github.com/carrot/roots-records#template-and-out).
+- `templatesGlob`: This property exists to play nicely with [roots-records](https://github.com/carrot/roots-records). If you're not using that extension, you can omit this property. If you are, this should be a globbing pattern (or an array of patterns) that identifies all your **roots-records** ["single view templates"](https://github.com/carrot/roots-records#template-and-out).
 
 **roots-i18n** assumes that the default language of your site is English, and places translated versions of the site in subdirectories named after the 2-letter language code, i.e. a Spanish homepage would be at `example.com/es/`, with the English homepage at `example.com/`. It only handles view templates – assets are untouched. **roots-i18n** assumes that all assets are non-language-specific, and are accessed at the root directory of your site.
 
